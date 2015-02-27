@@ -47,6 +47,17 @@
             android:title="@string/lockscreen_targets_message"
             settings:advanced="true"/>
 
+	<PreferenceScreen
+                 android:key="lockscreen_shortcuts"
+                 android:fragment="com.android.settings.cyanogenmod.dslv.ActionListViewSettings"
+                 android:title="@string/lockscreen_shortcuts_title"
+                 android:layout="@layout/preference_appshortcuts" >
+             <extra android:name="actionMode" android:value="4" />
+             <extra android:name="maxAllowedActions" android:value="5" />
+             <extra android:name="disableLongpress" android:value="true" />
+             <extra android:name="useAppPickerOnly" android:value="true" />
+             <extra android:name="fragment" android:value="com.android.settings.cyanogenmod.fragments.AppShortcuts" />
+
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
             android:title="@string/lockscreen_visualizer_title"
