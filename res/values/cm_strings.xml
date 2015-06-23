@@ -1432,4 +1432,9 @@
                  <b>Last update:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
 
     <string name="quick_settings_reset_message">Reset quick settings tiles?</string>
+
+    <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">Superuser indicator</string>
+    <string name="su_indicator_summary">Show superuser indicator on status bar when a session is active</string>
+
 </resources>
