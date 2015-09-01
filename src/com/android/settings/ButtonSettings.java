@@ -620,9 +620,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         Settings.System.putInt(context.getContentResolver(),
                 Settings.System.NAVIGATION_BAR_SHOW, enabled ? 1 : 0);
-        CmHardwareManager cmHardwareManager =
-                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
-        cmHardwareManager.set(CmHardwareManager.FEATURE_KEY_DISABLE, enabled);
+
+        CMHardwareManager hardware = CMHardwareManager.getInstance(context);
+        hardware.set(CMHardwareManager.FEATURE_KEY_DISABLE, !enabled);
 
         /* Save/restore button timeouts to disable them in softkey mode */
         if (enabled) {
