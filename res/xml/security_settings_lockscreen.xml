@@ -41,22 +41,23 @@
             android:title="@string/owner_info_settings_title"
             android:summary="@string/owner_info_settings_summary"/>
 
-        <PreferenceScreen
-            android:key="lockscreen_shortcuts_settings"
-            android:fragment="com.android.settings.cyanogenmod.LockscreenShortcuts"
-            android:title="@string/lockscreen_targets_message"
-            settings:advanced="true"/>
-
 	<PreferenceScreen
-                 android:key="lockscreen_shortcuts"
-                 android:fragment="com.android.settings.cyanogenmod.dslv.ActionListViewSettings"
-                 android:title="@string/lockscreen_shortcuts_title"
-                 android:layout="@layout/preference_appshortcuts" >
+            android:key="lockscreen_shortcuts"
+            android:fragment="com.android.settings.cyanogenmod.dslv.ActionListViewSettings"
+            android:title="@string/lockscreen_shortcuts_title"
+            android:layout="@layout/preference_appshortcuts" >
              <extra android:name="actionMode" android:value="4" />
              <extra android:name="maxAllowedActions" android:value="5" />
              <extra android:name="disableLongpress" android:value="true" />
              <extra android:name="useAppPickerOnly" android:value="true" />
              <extra android:name="fragment" android:value="com.android.settings.cyanogenmod.fragments.AppShortcuts" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="lockscreen_shortcuts_settings"
+            android:fragment="com.android.settings.cyanogenmod.LockscreenShortcuts"
+            android:title="@string/lockscreen_targets_message"
+            settings:advanced="true"/>
 
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
